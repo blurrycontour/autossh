@@ -35,7 +35,7 @@ if [ -n "${SSH_BIND_IP}" ] && [ "${SSH_MODE}" = "-R" ]; then
     echo "[WARN ] SSH_BIND_IP requires GatewayPorts configured on the server to work properly"
 fi
 
-if [ "${SSH_TTY:=true}" = true ]; then
+if [ "${SSH_TTY_ENABLE:=true}" = true ]; then
     SSH_TTY_ARGS="-t -t"
 else
     SSH_TTY_ARGS=""
